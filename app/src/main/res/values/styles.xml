@@ -1,0 +1,114 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+  <style name="bottom_text_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@drawable/skin_item_text_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/textSize</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <style name="card_style">
+        <item name="android:layout_margin">@dimen/activity_vertical_margin</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="title_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/skin_text_color</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+
+    <style name="normal_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/skin_text_color</item>
+        <item name="android:textSize">@dimen/textSize</item>
+    </style>
+
+    <style name="normal_image_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_margin">@dimen/activity_horizontal_margin</item>
+    </style>
+
+   <style name="back_btn_style" parent="normal_image_style">
+        <item name="android:src">@drawable/back_btn</item>
+    </style>
+
+   <style name="input_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/input_bg</item>
+        <item name="android:gravity">center</item>
+       <item name="android:textSize">@dimen/textSize</item>
+        <item name="android:layout_margin">@dimen/activity_vertical_margin</item>
+    </style>
+
+   <style name="login_btn_style">
+        <item name="android:textSize">@dimen/textSize</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/activity_horizontal_margin</item>
+    </style>
+    <style
+        name="progressDialog"
+        parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowBackground">@drawable/dialog_bg</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">false</item><!--模糊-->
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+
+   <style name="add_style">
+        <item name="android:textSize">@dimen/textSize</item>
+        <item name="android:textColor">@color/skin_text_color</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:drawablePadding">@dimen/activity_horizontal_margin</item>
+    </style>
+
+   <style name="add_select_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/add_btn_drawable</item>
+        <item name="android:textColor">@color/skin_text_color</item>
+       <item name="android:padding">3dp</item>
+    </style>
+
+
+
+</resources>

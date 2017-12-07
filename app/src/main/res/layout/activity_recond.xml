@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/skin_bg_color"
+    tools:context="com.example.ckz.jizhang.view.activity.RecondActivity">
+
+    <FrameLayout
+        android:id="@+id/center_contain"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/bottom_bg_color">
+
+        <TextView
+            android:id="@+id/record_btn"
+            style="@style/bottom_text_style"
+            android:text="@string/record_text"
+            android:drawableTop="@drawable/skin_drawable_record"
+            />
+        <TextView
+            android:id="@+id/bill_btn"
+            style="@style/bottom_text_style"
+            android:text="@string/moth_bill"
+            android:drawableTop="@drawable/skin_drawable_bill"
+            />
+        <TextView
+            android:drawableTop="@drawable/skin_drawable_user"
+            android:id="@+id/mine_btn"
+            style="@style/bottom_text_style"
+            android:text="@string/mine_text"
+            />
+    </LinearLayout>
+</LinearLayout>

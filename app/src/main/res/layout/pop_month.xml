@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#70000000">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:background="@color/skin_bg_color">
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="?android:attr/actionBarSize">
+           <ImageView
+               android:id="@+id/arrow_left"
+               style="@style/normal_image_style"
+               android:src="@drawable/arrow_left"/>
+           <ImageView
+               android:id="@+id/arrow_right"
+               style="@style/normal_image_style"
+               android:src="@drawable/arrow_right"
+               android:layout_alignParentRight="true"/>
+           <TextView
+               android:id="@+id/years_text"
+               style="@style/title_text_style"
+               android:text="2017"/>
+       </RelativeLayout>
+       <android.support.v7.widget.RecyclerView
+           android:id="@+id/month_list"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@color/deep_bg"></android.support.v7.widget.RecyclerView>
+   </LinearLayout>
+</LinearLayout>

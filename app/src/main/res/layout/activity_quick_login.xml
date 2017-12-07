@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/skin_bg_color"
+    tools:context="com.example.ckz.jizhang.view.activity.QuickLoginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize">
+        <ImageView
+            android:id="@+id/back_btn"
+            style="@style/back_btn_style" />
+        <TextView
+            android:text="快速登陆"
+            style="@style/title_text_style" />
+    </RelativeLayout>
+
+    <com.example.ckz.jizhang.view.view.ClearEditText
+        android:id="@+id/input_phone"
+        android:hint="@string/input_phone_num"
+        style="@style/input_style" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <com.example.ckz.jizhang.view.view.ClearEditText
+            android:id="@+id/input_sms"
+            style="@style/input_style"
+            android:hint="@string/input_sms"
+            android:width="0dp"
+            android:layout_weight="1"/>
+        <com.example.ckz.jizhang.view.view.SmsButton
+            android:id="@+id/sms_btm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_btn_bg"
+            android:textColor="@android:color/white"
+            android:text="@string/get_sms"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            />
+    </LinearLayout>
+    <Button
+        android:id="@+id/login_btn"
+        style="@style/login_btn_style"
+        android:background="@drawable/login_btn_bg"
+        android:text="@string/login"
+        android:textSize="@dimen/textSize"
+        android:textColor="@android:color/white"/>
+</LinearLayout>

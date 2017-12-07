@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Jizhang</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="mine_text">我的</string>
+    <string name="record_text">记账</string>
+    <string name="moth_bill">月账单</string>
+    <string name="user_login">用户登陆</string>
+    <string name="input_phone_num">请输入手机号码</string>
+    <string name="input_password">请输入密码</string>
+    <string name="forget_password">忘记密码？</string>
+    <string name="sign_phone">手机注册</string>
+    <string name="login">登陆</string>
+    <string name="simple_login">一键注册或登陆</string>
+    <string name="input_true_num">请输入11位电话号码</string>
+    <string name="not_empty">账号或密码不可为空</string>
+    <string name="below_11">请输入11位电话号码</string>
+    <string name="reset_password">重置密码</string>
+    <string name="get_sms">获取验证码</string>
+    <string name="input_sms">输入验证码</string>
+    <string name="new_password">请输入新密码</string>
+    <string name="input_again">确认新密码</string>
+    <string name="password_length">密码不可小于9位</string>
+    <string name="phone_empty">手机号不可为空</string>
+    <string name="sms_not_empty">验证码或密码不可为空</string>
+    <string name="not_right">两次输入的密码不一致</string>
+    <string name="sms_phone_not_empty">手机号或验证码不可为空</string>
+    <string name="input_right_sms">登陆失败，请输入正确的验证码</string>
+    <string name="get_faild">获取失败，请检查网络</string>
+    <string name="person_information">个人信息</string>
+    <string name="user_iocn">头像</string>
+    <string name="user_name">名字</string>
+    <string name="user_id">UID</string>
+    <string name="user_birth">生日</string>
+    <string name="user_sex">性别</string>
+    <string name="add">添加</string>
+</resources>

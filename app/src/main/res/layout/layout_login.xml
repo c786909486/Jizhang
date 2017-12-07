@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/skin_bg_color">
+
+    <com.example.ckz.jizhang.view.view.ClearEditText
+        android:id="@+id/input_phone"
+        android:hint="@string/input_phone_num"
+        style="@style/input_style"
+        android:inputType="phone"
+        />
+    <com.example.ckz.jizhang.view.view.ClearEditText
+        android:id="@+id/input_password"
+        android:hint="@string/input_password"
+        style="@style/input_style"
+        android:inputType="textPassword"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/forget_password"
+            style="@style/normal_text_style"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:text="@string/forget_password"/>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/sign_by_phone"
+            style="@style/normal_text_style"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:text="@string/sign_phone"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/login_btn"
+        android:textColor="@android:color/white"
+        android:text="@string/login"
+        android:background="@drawable/login_btn_bg"
+        style="@style/login_btn_style"/>
+
+    <Button
+        android:id="@+id/simple_login"
+        android:background="@drawable/input_bg"
+        android:textColor="@color/skin_text_color"
+        android:text="@string/simple_login"
+       style="@style/login_btn_style" />
+</LinearLayout>

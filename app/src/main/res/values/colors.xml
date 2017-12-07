@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#185BE5</color>
+
+    <!--控件背景-->
+    <color name="skin_bg_color">#efeeee</color>
+    <color name="skin_bg_color_day">#ffffff</color>
+    <color name="skin_bg_color_night">#4b4a4a</color>
+
+    <color name="bottom_bg_color">#e6e6e6</color>
+    <color name="bottom_bg_color_night">#353535</color>
+    <!--登陆按钮颜色-->
+    <color name="login_btn_color">#185BE5</color>
+    <color name="login_btn_colot_night">#353535</color>
+    
+    <!--字体颜色-->
+    <color name="skin_text_color">#1b1b1b</color>
+    <color name="skin_text_color_day">#1b1b1b</color>
+    <color name="skin_text_color_night">#ecebeb</color>
+    <color name="skin_text_color_selected">#185BE5</color>
+    <color name="skin_text_color_night_selected">#0F36A9</color>
+    <!--分割线-->
+    <color name="line_color">#30454444</color>
+    <color name="line_color_night">#30cfcfcf</color>
+
+    <color name="float_color">#bf0329</color>
+
+    <color name="bill_blue">#476be4</color>
+    <color name="bill_blue_night">#1b1b1b</color>
+    <color name="bill_red">#f50111</color>
+    <color name="bill_red_night">#1b1b1b</color>
+    <color name="bill_black">#111111</color>
+    <color name="bill_black_night">#1b1b1b</color>
+    <color name="bill_green">#15ff00</color>
+    <color name="bill_green_night">#1b1b1b</color>
+    <color name="bill_yellow">#fc5000</color>
+    <color name="bill_bill_yellow_night">#1b1b1b</color>
+
+    <color name="add_btn_bg">#ffffff</color>
+    <color name="add_btn_bg_select">#185BE5</color>
+    <color name="add_btn_bg_night">#111111</color>
+    <color name="add_btn_bg_select_night">#ffffff</color>
+    <color name="deep_bg">#bfbfbf</color>
+    <color name="deep_bg_night">#202020</color>
+</resources>

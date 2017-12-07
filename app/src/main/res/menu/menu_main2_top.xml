@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/top_group">
+        <item android:id="@+id/test_night" android:title="夜间"/>
+        <item android:id="@+id/test_day" android:title="白天"/>
+    </group>
+</menu>
