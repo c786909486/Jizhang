@@ -1,6 +1,7 @@
 package com.example.ckz.jizhang.application;
 
 import com.example.ckz.jizhang.api.KeyCenter;
+import com.umeng.analytics.MobclickAgent;
 import com.zhy.changeskin.SkinManager;
 
 import org.litepal.LitePal;
@@ -25,6 +26,7 @@ public class MyApplication extends LitePalApplication {
         LitePal.initialize(this);
         initSkinManager();
         initBmob();
+        initUMeng();
     }
 
     private void initBmob() {
@@ -40,6 +42,15 @@ public class MyApplication extends LitePalApplication {
                 .setSkinStatusBarColorEnable(false)                     // 关闭状态栏换肤，默认打开[可选]
                 .setSkinWindowBackgroundEnable(false)                   // 关闭windowBackground换肤，默认打开[可选]
                 .loadSkin();
+    }
+
+    /**
+     * 初始化友盟sdk
+     */
+    public void initUMeng(){
+        MobclickAgent.setDebugMode(false);
+        MobclickAgent.openActivityDurationTrack(false);
+
     }
 
 

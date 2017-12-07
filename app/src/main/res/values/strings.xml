@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Jizhang</string>
+    <string name="app_name">记账app</string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="mine_text">我的</string>
     <string name="record_text">记账</string>

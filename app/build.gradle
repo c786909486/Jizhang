@@ -10,12 +10,57 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        //统一维度
+        flavorDimensions "versionCode"
     }
+
+    //签名
+    signingConfigs {
+
+        debugConfig  {
+            storeFile file("lookworld.jks")
+            storePassword "00000000"
+            keyAlias "lookworld"
+            keyPassword "00000000"
+        }
+
+        release {
+            storeFile file("lookworld.jks")
+            storePassword "00000000"
+            keyAlias "lookworld"
+            keyPassword "00000000"
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //签名，自定义文件输出名
+            signingConfig getSigningConfig()
+            android.applicationVariants.all { variant ->
+                variant.outputs.all {
+                    def newApkName
+
+                    newApkName = "记账_v${defaultConfig.versionName}_${variant.productFlavors[0].name}.apk"
+                    outputFileName = newApkName;
+                }
+            }
         }
+    }
+
+
+
+    productFlavors {
+        kuan {}
+        xiaomi {}
+        qh360 {}
+        baidu {}
+        wandoujia {}
+    }
+
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
     }
 }
 repositories {
@@ -54,4 +99,5 @@ dependencies {
     compile 'com.lcodecorex:tkrefreshlayout:1.0.7'
     implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
     implementation project(':usuallySDK')
+    compile 'com.umeng.analytics:analytics:latest.integration'
 }
