@@ -44,4 +44,5 @@
     <color name="add_btn_bg_select_night">#ffffff</color>
     <color name="deep_bg">#bfbfbf</color>
     <color name="deep_bg_night">#202020</color>
+    <color name="launcher_bg">#39A0FF</color>
 </resources>
