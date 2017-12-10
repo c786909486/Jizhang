@@ -127,7 +127,7 @@ public class BillFragment extends BaseFragment implements MBillView,View.OnClick
         mPieChart.setCenterTextTypeface(Typeface.DEFAULT);
 
         //设置中间圆盘的颜色
-        mPieChart.setHoleColor(Color.WHITE);
+        mPieChart.setHoleColor(getContext().getResources().getColor(R.color.skin_bg_color));
         //是否显示饼图中间空白区域，默认显示
         mPieChart.setDrawHoleEnabled(true);
         //设置圆盘是否转动，默认转动
@@ -293,6 +293,8 @@ public class BillFragment extends BaseFragment implements MBillView,View.OnClick
         pop.create().showPop(expandBtn).setListener(new MonthPopManager.OnDateGetListener() {
             @Override
             public void getDate(String date) {
+                mData.clear();
+                mAdapter.notifyDataSetChanged();
                 String month = date.split("-")[1];
                 monthText.setText(month+"月账单");
                 expandBtn.performClick();
@@ -332,20 +334,23 @@ public class BillFragment extends BaseFragment implements MBillView,View.OnClick
 
     @Override
     public void onValueSelected(Entry e, Highlight h) {
+
         PieEntry entry = (PieEntry) e;
         String type = entry.getLabel().substring(0,4);
         typeText.setText(type);
 //        Toast.makeText(getContext(),type,Toast.LENGTH_SHORT).show();
         mData.clear();
+        mScroll.smoothScrollTo(0,0);
         presenter.getTypeData(type, new OnTypeDataListener() {
             @Override
             public void onDataGet(final List<BillNetBean> beans) {
                 getActivity().runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
+                        mData.clear();
                         mData.addAll(beans);
                         mAdapter.notifyDataSetChanged();
-                        LogUtils.d(TAG,beans.size()+"");
+                        LogUtils.d(TAG,beans.size()+"and"+mData.size());
                     }
                 });
             }

@@ -1,5 +1,6 @@
 package com.example.ckz.jizhang.view.activity;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -38,7 +39,9 @@ public class RecondActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recond);
         initView();
-        StatusBarUtil.setTransparentForImageView(this,mFragment);
+        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP){
+            StatusBarUtil.setTransparentForImageView(this,mFragment);
+        }
         mManager = getSupportFragmentManager();
         setDefaultFragment();
     }

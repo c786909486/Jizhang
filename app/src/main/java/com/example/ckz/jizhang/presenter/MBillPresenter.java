@@ -55,6 +55,7 @@ public class MBillPresenter {
                        hideUI();
                    }else {
                        showUI( txPay,txGet,onlinePay,onlineGet,marketPay,marketGet,otherPay,otherGet,sum,list);
+                       returnData.clear();
                        returnData.addAll(list);
                        hideNoData();
                    }
@@ -85,6 +86,7 @@ public class MBillPresenter {
     }
     private List<BillNetBean> getTxPay(){
         List<BillNetBean> beans = new ArrayList<>();
+        beans.clear();
         for (BillNetBean netBean:returnData){
             if (netBean.getType().equals("通讯") && netBean.getMoney()<0){
                 beans.add(netBean);
@@ -95,6 +97,7 @@ public class MBillPresenter {
 
     private List<BillNetBean> getTxGet(){
         List<BillNetBean> beans = new ArrayList<>();
+        beans.clear();
         for (BillNetBean netBean:returnData){
             if (netBean.getType().equals("通讯") && netBean.getMoney()>0){
                 beans.add(netBean);
@@ -105,6 +108,7 @@ public class MBillPresenter {
 
     private List<BillNetBean> getOnlinePay(){
         List<BillNetBean> beans = new ArrayList<>();
+        beans.clear();
         for (BillNetBean netBean:returnData){
             if (netBean.getType().equals("线上") && netBean.getMoney()<0){
                 beans.add(netBean);
@@ -115,6 +119,7 @@ public class MBillPresenter {
 
     private List<BillNetBean> getOnlineGet(){
         List<BillNetBean> beans = new ArrayList<>();
+        beans.clear();
         for (BillNetBean netBean:returnData){
             if (netBean.getType().equals("线上") && netBean.getMoney()>0){
                 beans.add(netBean);
@@ -125,6 +130,7 @@ public class MBillPresenter {
 
     private List<BillNetBean> getMarketPay(){
         List<BillNetBean> beans = new ArrayList<>();
+        beans.clear();
         for (BillNetBean netBean:returnData){
             if (netBean.getType().equals("线下") && netBean.getMoney()<0){
                 beans.add(netBean);
@@ -135,6 +141,7 @@ public class MBillPresenter {
 
     private List<BillNetBean> getMarketGet(){
         List<BillNetBean> beans = new ArrayList<>();
+        beans.clear();
         for (BillNetBean netBean:returnData){
             if (netBean.getType().equals("线下") && netBean.getMoney()>0){
                 beans.add(netBean);
@@ -145,6 +152,7 @@ public class MBillPresenter {
 
     private List<BillNetBean> getOtherPay(){
         List<BillNetBean> beans = new ArrayList<>();
+        beans.clear();
         for (BillNetBean netBean:returnData){
             if (netBean.getType().equals("其他") && netBean.getMoney()<0){
                 beans.add(netBean);
@@ -155,6 +163,7 @@ public class MBillPresenter {
 
     private List<BillNetBean> getOtherGet(){
         List<BillNetBean> beans = new ArrayList<>();
+        beans.clear();
         for (BillNetBean netBean:returnData){
             if (netBean.getType().equals("其他") && netBean.getMoney()>0){
                 beans.add(netBean);

@@ -8,12 +8,14 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.ckz.jizhang.R;
 import com.example.ckz.jizhang.view.view.ClearEditText;
 import com.example.vuandroidadsdk.showpop.ShowPopup;
 
+import java.lang.reflect.Field;
 import java.util.Calendar;
 
 /**
@@ -34,6 +36,7 @@ public class ShowAddPop implements View.OnClickListener,DatePickerDialog.OnDateS
     private ImageView mApply;
 
     private String type;
+    private LinearLayout mStatus;
 
 
     public String getType() {
@@ -85,6 +88,12 @@ public class ShowAddPop implements View.OnClickListener,DatePickerDialog.OnDateS
     }
 
     private void init(View view) {
+        mStatus = ((LinearLayout) view.findViewById(R.id.padding_status));
+        LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) mStatus.getLayoutParams();
+        //获取到状态栏的高度
+        int statusHeight = getStatusBarHeight();
+        params.height = statusHeight;
+        mStatus.setLayoutParams(params);
         mPhone = view.findViewById(R.id.type_phone);
         mOnline = view.findViewById(R.id.type_online);
         mMarket = view.findViewById(R.id.type_market);
@@ -107,6 +116,18 @@ public class ShowAddPop implements View.OnClickListener,DatePickerDialog.OnDateS
         mMoney.addTextChangedListener(this);
     }
 
+    private int getStatusBarHeight() {
+        try {
+            Class<?> c = Class.forName("com.android.internal.R$dimen");
+            Object obj = c.newInstance();
+            Field field = c.getField("status_bar_height");
+            int x = Integer.parseInt(field.get(obj).toString());
+            return context.getResources().getDimensionPixelSize(x);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
     private void reset1(){
         mPhone.setSelected(false);
         mOnline.setSelected(false);

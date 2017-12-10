@@ -3,6 +3,11 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/skin_bg_color">
+    <LinearLayout
+        android:id="@+id/padding_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize">
